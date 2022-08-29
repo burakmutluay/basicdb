@@ -24,6 +24,10 @@ public class StringField implements Field {
             value = s;
     }
 
+    public StringField(String s) {
+        this(s, Type.STRING_LEN);
+    }
+
     public String toString() {
         return value;
     }
