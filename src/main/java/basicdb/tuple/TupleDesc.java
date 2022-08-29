@@ -46,6 +46,10 @@ public class TupleDesc implements Serializable {
         throw new UnsupportedOperationException("implement me!");
     }
 
+    public String getFieldName(int i) throws NoSuchElementException {
+        throw new UnsupportedOperationException("implement me!");
+    }
+
     public int fieldNameToIndex(String name) throws NoSuchElementException {
         throw new UnsupportedOperationException("implement me!");
     }
