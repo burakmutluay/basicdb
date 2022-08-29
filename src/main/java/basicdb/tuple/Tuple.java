@@ -1,6 +1,7 @@
 package main.java.basicdb.tuple;
 
 import java.io.Serializable;
+import java.util.Iterator;
 
 public class Tuple implements Serializable {
 
@@ -27,6 +28,10 @@ public class Tuple implements Serializable {
     }
 
     public String toString() {
+        throw new UnsupportedOperationException("implement me!");
+    }
+
+    public Iterator<Field> fields() {
         throw new UnsupportedOperationException("implement me!");
     }
 
