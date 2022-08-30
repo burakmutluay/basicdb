@@ -1,6 +1,7 @@
 package main.java.basicdb.tuple;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class Tuple implements Serializable {
@@ -12,27 +13,31 @@ public class Tuple implements Serializable {
     private Field[] fields;
 
     public Tuple(TupleDesc tupleDesc){
-        throw new UnsupportedOperationException("implement me!");
+        this.tupleDesc = tupleDesc;
     }
 
     public TupleDesc getTupleDesc() {
-        throw new UnsupportedOperationException("implement me!");
+        return this.tupleDesc;
     }
 
     public void setField(int i, Field f) {
-        throw new UnsupportedOperationException("implement me!");
+        this.fields[i] = f;
     }
 
     public Field getField(int i) {
-        throw new UnsupportedOperationException("implement me!");
+        return this.fields[i];
     }
 
     public String toString() {
-        throw new UnsupportedOperationException("implement me!");
+        return "Tuple{" +
+                "tupleDesc=" + tupleDesc +
+                ", recordId=" + recordId +
+                ", fields=" + Arrays.toString(fields) +
+                '}';
     }
 
     public Iterator<Field> fields() {
-        throw new UnsupportedOperationException("implement me!");
+        return Arrays.stream(this.fields).iterator();
     }
 
     public RecordId getRecordId() {
